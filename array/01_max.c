@@ -11,4 +11,5 @@ int main() {
     int arr[5] = {1, 2, 3, 4, 5};
     int max = maximum(arr, 5);
     printf("Maximum value in the array is: %d\n", max);
+    return 0;
 }
