@@ -11,7 +11,7 @@ int main (){
     // //basic code for pattern printing in C language. This code prints a rectangle of asterisks with 5 rows and 7 columns.
     
     // // creating a triangle where the int in each row is the same as the row number
-    // printf("creating a triangle where the int in each row is the same as the row number: \nchoose a number for the rows: \n");
+    // printf("creating a right angle triangle where the int in each row is the same as the row number: \nchoose a number for the rows: \n");
     // int r ;
     // scanf("%d",&r);
     // for(int i=1;i<r+1;i++){
@@ -24,7 +24,7 @@ int main (){
     
 
     // //same with increasing counting in each row
-    // printf("creating a triangle with increasing counting in each row: \nchoose a number for the rows: \n");
+    // printf("creating a right angle triangle with increasing counting in each row: \nchoose a number for the rows: \n");
     // int r1;
     // scanf("%d",&r1);
     // for(int i=1;i<r1+1;i++){
@@ -38,7 +38,7 @@ int main (){
 
 
     // // creating a inversse triangle with decreasing counting in each row
-    // printf("\ncreating a inversse triangle with decreasing counting in each row: \nchoose a number for the rows: \n");
+    // printf("\ncreating a inversse right angle triangle with decreasing counting in each row: \nchoose a number for the rows: \n");
     // int r3;
     // scanf("%d",&r3);    
     // for(int i=1;i<=r3;i++){
@@ -49,13 +49,32 @@ int main (){
     // }
 
 
-    printf("\ncreating a inversse triangle with decreasing counting in each row: \nchoose a number for the rows: \n");
-    int r4;
-    scanf("%d",&r4);
-    for(int i=1;i<=r4;i++){
-        for(int j=1;j<=r4-i+1;j++){
-            printf("%d",j);
-        }
-        printf("\n");
-    }
-}
+    // printf("\ncreating a inversse right angle triangle with decreasing counting in each row: \nchoose a number for the rows: \n");
+    // int r4;
+    // scanf("%d",&r4);
+    // for(int i=1;i<=r4;i++){
+    //     for(int j=1;j<=r4-i+1;j++){
+    //         printf("%d",j);
+    //     }
+    //     printf("\n");
+    // }
+
+    // printf("\n");
+
+    printf("creating a proper pyramid-triangle of n rows: \nchoose a number for the rows: \n");
+    int r5; 
+    scanf("%d",&r5);
+    for(int i=1;i<=r5;i++){
+            for(int k=1;k<=r5-i-1;k++){
+                printf(" ");
+            }
+            for(int l=1;l<=2*i-1;l++){
+                printf("*");
+            }
+            for(int m=1;m<=r5-i-1;m++){
+                printf(" ");
+            }
+            printf("\n");
+         }
+    
+ }
