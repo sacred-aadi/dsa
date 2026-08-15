@@ -19,4 +19,18 @@ int main (){
         }
         printf("\n");
     }
-}
+    
+
+    //same with increasing counting in each row
+    
+    printf("\n");
+    int r1 ;
+    scanf("%d",&r1);
+    for(int i=1;i<r1+1;i++){
+        for(int j=1;j<=i;j++){
+            printf("%d ",j);
+        }
+        printf("\n");
+        }
+    }
+    
