@@ -61,20 +61,35 @@ int main (){
 
     // printf("\n");
 
-    printf("creating a proper pyramid-triangle of n rows: \nchoose a number for the rows: \n");
-    int r5; 
-    scanf("%d",&r5);
-    for(int i=1;i<=r5;i++){
-            for(int k=1;k<=r5-i-1;k++){
-                printf(" ");
-            }
-            for(int l=1;l<=2*i-1;l++){
-                printf("*");
-            }
-            for(int m=1;m<=r5-i-1;m++){
-                printf(" ");
-            }
-            printf("\n");
-         }
-    
- }
+    // printf("creating a proper pyramid-triangle of n rows: \nchoose a number for the rows: \n");
+    // int r5; 
+    // scanf("%d",&r5);
+    // for(int i=1;i<=r5;i++){
+    //         for(int k=1;k<=r5-i-1;k++){
+    //             printf(" ");
+    //         }
+    //         for(int l=1;l<=2*i-1;l++){
+    //             printf("*");
+    //         }
+    //         for(int m=1;m<=r5-i-1;m++){
+    //             printf(" ");
+    //         }
+    //         printf("\n");
+    //      }
+
+    printf("\ncreating a proper inverse-pyramid-triangle of n rows \nchoose a number for the rows: \n");
+    int r6;
+    scanf("%d",&r6);
+    for(int i=r6;i>=0;i--){
+        for(int k=1;k<r6-i;k++){
+            printf(" ");
+        }
+        for(int l=1;l<=2*i+1;l++){
+            printf("*");
+        }
+        for(int m=1;m<r6-i;m++){
+            printf(" ");
+        }
+        printf("\n");
+    }
+    }
