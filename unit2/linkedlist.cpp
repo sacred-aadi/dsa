@@ -52,6 +52,50 @@ Node* deletetail(Node* head){
     temp->next = nullptr;
     return head;
 }
+
+// a function to delete the kth element of the list 
+Node* kdelete(Node* head,int k){
+    if (k==1){
+        // Node* temp = head;
+        // head= head->next;
+        // free(temp);
+        // return head;
+        head = deletehead(head);
+        return head;
+    }
+    int count=0;
+    Node* temp = head;
+    Node* prev=NULL;
+    while(temp!=NULL){
+        count ++ ;
+        if(count==k){
+            prev->next=prev->next->next;
+            free (temp);
+            break;
+        }
+        prev = temp;
+        temp = temp -> next;
+
+    }
+    return head;
+}
+//removing element based on value
+Node* valdelete(Node* head, int val)
+{
+    Node* temp = head;
+    Node* prev = NULL;
+    while(temp != NULL){
+        if(temp->data==val){
+        prev->next=prev->next->next ;
+    }
+    prev = temp;
+    temp = temp->next;
+}
+return head;
+}
+// inserting into the linked list 
+
+
 int main (){
     vector <int> arr={1,2,3,4,5,6,7,8,9};
     Node* head = convertarray(arr);
@@ -64,5 +108,11 @@ int main (){
     print(head);
     cout<<"deleting tail from the list by freeing space : "<<endl;
     head=deletetail(head);
+    print(head);
+    cout<<"deleting kth element from the list : "<<endl;
+    head = kdelete(head,5);
+    print(head);
+    cout<<"deleting based on value : "<<endl;
+    head = valdelete(head,4);
     print(head);
 }
