@@ -15,27 +15,40 @@ struct Node{
        next = nullptr;
     }
 };
-
-Node* convertarray(vector<int> &arr){
+// a function to convert an array to linked list
+Node* convertarray(vector<int> &arr){ 
     Node* head =new Node(arr[0]);
     Node* mover = head;         
     for(int i=1;i<arr.size();i++){
         Node* temp  = new Node (arr[i]);
         mover->next = temp;
         mover=temp;
-
     }
     return head;
 }
-
+// a function to delete the head of the list
+Node* deletehead(Node* head){
+    Node* temp = head;
+    head= head->next;
+    delete(temp);
+    return head;
+}
+// function to print the linked list - just automating constant looping
+void print (Node* head){
+    while (head != NULL){
+        cout<<head->data<<" ";
+        head = head->next;
+    }
+    cout<<endl;
+}
 int main (){
     vector <int> arr={1,2,3,4};
     Node* head = convertarray(arr);
     // cout<<head->data;
     Node* temp = head;
-
-    while (temp){
-        cout<<temp->data<<" ";
-        temp = temp->next;
-    }
+    cout<<"after converting array to linked list: "<<endl;
+    print(head); //using automated function
+    head = deletehead(head);
+    cout<<"deleting head from this list with free space : "<<endl;
+    print(head);
 }
