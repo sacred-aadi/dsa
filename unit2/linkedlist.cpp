@@ -41,8 +41,19 @@ void print (Node* head){
     }
     cout<<endl;
 }
+
+//deleting tail of a linked list
+Node* deletetail(Node* head){
+    Node* temp = head;
+    while(temp->next->next != NULL){
+        temp = temp -> next;
+    }
+    free (temp->next);
+    temp->next = nullptr;
+    return head;
+}
 int main (){
-    vector <int> arr={1,2,3,4};
+    vector <int> arr={1,2,3,4,5,6,7,8,9};
     Node* head = convertarray(arr);
     // cout<<head->data;
     Node* temp = head;
@@ -50,5 +61,8 @@ int main (){
     print(head); //using automated function
     head = deletehead(head);
     cout<<"deleting head from this list with free space : "<<endl;
+    print(head);
+    cout<<"deleting tail from the list by freeing space : "<<endl;
+    head=deletetail(head);
     print(head);
 }
