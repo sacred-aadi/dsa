@@ -112,7 +112,7 @@ int main (){
     cout<<"deleting kth element from the list : "<<endl;
     head = kdelete(head,5);
     print(head);
-    cout<<"deleting based on value : "<<endl;
+    cout<<"deleting based on value : (4 in this case) "<<endl;
     head = valdelete(head,4);
     print(head);
 }
