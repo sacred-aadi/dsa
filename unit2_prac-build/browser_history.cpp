@@ -23,9 +23,14 @@ struct Node {
 int main  (){
 
 
+    // trying to add things manually for better understanding
     Node* current = new Node("google.com");
     Node* youtube = new Node("youtube.com");
 
     current->next = youtube;
     youtube->back = current;
+
+    cout<< current->url <<endl;
+    cout<< current->next->url <<endl;
+
 }
